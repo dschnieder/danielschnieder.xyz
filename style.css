@@ -23,6 +23,11 @@ body::before {
 }
 
 body {
+  color: #000; /* Solid black text */
+  font-weight: bold; /* Bold font for readability */
+  font-size: 18px; /* Larger font size */
+  line-height: 1.6; /* Improve line spacing */
+    
   background-image: url('background.jpg'); /* Path to your uploaded image */
   background-size: cover; /* Scales the image to cover the entire viewport */
   background-repeat: no-repeat; /* Prevents tiling */
