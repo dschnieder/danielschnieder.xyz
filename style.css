@@ -18,17 +18,17 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* Light overlay */
+  /*background-color: rgba(255, 255, 255, 0.7);*/ /* Light overlay */
   z-index: -1;
 }
 
 body {
-  /*background-image: url('background.jpg'); */ /* Path to your uploaded image */
-  /*background-size: cover; */ /* Scales the image to cover the entire viewport */
-  /*background-repeat: no-repeat; */ /* Prevents tiling */
-  /*background-attachment: fixed; */ /* Keeps background fixed while scrolling */
-  /*background-position: center; */ /* Centers the image */
-  /*color: #333; */ /* Adjusts text color for readability */
+  background-image: url('background.jpg');  /* Path to your uploaded image */
+  background-size: cover;  /* Scales the image to cover the entire viewport */
+  background-repeat: no-repeat;  /* Prevents tiling */
+  background-attachment: fixed;  /* Keeps background fixed while scrolling */
+  background-position: center;  /* Centers the image */
+  /*color: #333;*/  /* Adjusts text color for readability */
     
   color: #000; /* Solid black text */
   font-weight: bold; /* Bold font for readability */
