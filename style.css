@@ -3,7 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif; /* Changed font to 'Inter' from Google Fonts */
+}
+
+/* Smooth Scrolling (New Feature) */
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +26,7 @@ header {
     text-align: center;
 }
 
+/* Navigation Links with Hover Effect (Updated) */
 nav ul {
     display: flex;
     justify-content: center;
@@ -36,19 +42,37 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    position: relative; /* Added for hover underline effect */
+    padding: 5px 10px;
     transition: color 0.3s;
+}
+
+nav ul li a::after { /* Added hover underline effect */
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #48cae4;
+    transition: width 0.3s;
 }
 
 nav ul li a:hover {
     color: #90e0ef;
 }
 
+nav ul li a:hover::after { /* Added hover underline animation */
+    width: 100%;
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 5rem 1rem;
-    background: #0077b6;
+    background: url('images/hero-bg.jpg') center/cover no-repeat; /* New Background Image */
     color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Added Text Shadow */
 }
 
 .hero h1 {
@@ -61,50 +85,59 @@ nav ul li a:hover {
     margin-bottom: 1.5rem;
 }
 
-.hero .button {
-    padding: 0.5rem 1.5rem;
-    background: #90e0ef;
-    color: #0077b6;
-    text-decoration: none;
+/* Buttons with Hover Effects (Updated) */
+.button {
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    font-size: 1rem;
     font-weight: bold;
-    transition: background 0.3s;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(135deg, #0077b6, #48cae4); /* Added Gradient */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added Shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.hero .button:hover {
-    background: #48cae4;
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Added Hover Shadow */
 }
 
-/* Sections */
+/* Sections with Scroll Animation (New Feature) */
 section {
     padding: 2rem;
     max-width: 900px;
     margin: 0 auto;
+    background: white;
+    border-radius: 8px; /* Added Rounded Corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added Shadow */
+    opacity: 0; /* For Scroll Animation */
+    transform: translateY(20px); /* For Scroll Animation */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-section h1 {
-    margin-bottom: 1.5rem;
-    color: #0077b6;
+section.visible { /* Scroll Animation Trigger */
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* About Section */
-.about p {
-    margin-bottom: 1rem;
-}
-
-/* Projects */
+/* Projects Section (Updated) */
 .project-item {
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: linear-gradient(145deg, #ffffff, #f3f3f3); /* Gradient for Depth */
+    box-shadow: 5px 5px 15px #e0e0e0, -5px -5px 15px #ffffff; /* Neumorphic Effect */
+    transition: box-shadow 0.3s, transform 0.3s; /* Added Hover Effects */
 }
 
-.project-item h2 {
-    color: #0077b6;
-    margin-bottom: 0.5rem;
+.project-item:hover {
+    box-shadow: 5px 5px 15px #b8b8b8, -5px -5px 15px #ffffff;
+    transform: translateY(-3px); /* Hover Effect */
 }
 
 /* Experience */
@@ -117,20 +150,32 @@ section h1 {
     margin-bottom: 1rem;
 }
 
-/* Contact */
-.contact p {
-    margin: 1rem 0;
+/* Contact Form (Updated) */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Added Shadow */
 }
 
-.contact a {
+input:focus, textarea:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5); /* Focus Glow Effect */
+    outline: none;
+}
+
+/* Social Media Icons (New Feature) */
+.social-icons a {
+    margin: 0 10px;
     color: #0077b6;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 1.5rem;
     transition: color 0.3s;
 }
 
-.contact a:hover {
-    color: #48cae4;
+.social-icons a:hover {
+    color: #48cae4; /* Hover Effect */
 }
 
 /* Footer */
