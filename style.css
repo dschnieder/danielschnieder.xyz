@@ -94,8 +94,14 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 6rem 1rem;
-    background-color: #666666; /* Ohio State Gray */
-    color: #FFFFFF; /* White text */
+    background-color: #F3F3F3; /* Light gray background */
+}
+
+.hero section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .hero h1 {
