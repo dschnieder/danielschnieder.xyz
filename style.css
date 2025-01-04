@@ -12,8 +12,8 @@ html {
 
 /* Body */
 body {
-    background-color: #f3f3f3; /* Subtle background for professionalism */
-    color: #212529; /* Dark gray for readability */
+    background-color: #666666; /* Subtle background for professionalism */
+    color: #FFFFFF; /* Dark gray for readability */
     font-size: 18px;
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional font */
     line-height: 1.6;
@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-    background: #ba0c2f; /* Ohio State Scarlet */
+    background: #BB0000; /* Ohio State Scarlet */
     padding: 1.5rem;
     color: white;
     text-align: center;
