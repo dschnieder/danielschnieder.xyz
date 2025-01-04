@@ -12,18 +12,22 @@ html {
 
 /* Body */
 body {
-    background-color: #f0f0f0; /* Simple background for testing */
-    color: #000; /* Black text for better visibility */
+    background-color: #f3f3f3; /* Subtle background for professionalism */
+    color: #212529; /* Dark gray for readability */
     font-size: 18px;
-    font-family: Arial, sans-serif; /* Set a simple font */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional font */
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    background: #0077b6;
-    padding: 1rem;
+    background: #ba0c2f; /* Ohio State Scarlet */
+    padding: 1.5rem;
     color: white;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /* Navigation */
@@ -42,52 +46,59 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d0d0d0;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 5rem 1rem;
-    background-color: #DFDBE5; /* Light gray background for testing */
-    color: black;
+    padding: 6rem 1rem;
+    background-color: #d6d6d6; /* Light gray for elegance */
+    color: #212529;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 /* Buttons */
 .button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #0077b6;
+    background-color: #ba0c2f; /* Ohio State Scarlet */
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #48cae4;
+    background-color: #b22222; /* Darker Scarlet */
 }
 
 /* Sections */
 section {
     padding: 2rem;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
     margin-bottom: 2rem; /* Space between sections */
 }
 
@@ -95,8 +106,9 @@ section {
 footer {
     text-align: center;
     padding: 1rem;
-    background: #0077b6;
+    background: #ba0c2f; /* Ohio State Scarlet */
     color: white;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -110,10 +122,10 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
