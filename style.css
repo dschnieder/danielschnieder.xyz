@@ -80,7 +80,7 @@ nav ul li a:hover {
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #ba0c2f; /* Ohio State Scarlet */
+    background-color: #BB0000; /* Ohio State Scarlet */
     text-align: center;
     cursor: pointer;
     text-decoration: none;
@@ -106,7 +106,7 @@ section {
 footer {
     text-align: center;
     padding: 1rem;
-    background: #ba0c2f; /* Ohio State Scarlet */
+    background: #BB0000; /* Ohio State Scarlet */
     color: white;
     font-size: 0.9rem;
 }
