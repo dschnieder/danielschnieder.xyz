@@ -12,10 +12,10 @@ html {
 
 /* Body */
 body {
-    background-color: #666666; /* Subtle background for professionalism */
-    color: #FFFFFF; /* Dark gray for readability */
+    background-color: #F3F3F3; /* Slightly light gray */
+    color: #000000; /* Black text */
     font-size: 18px;
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional font */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -31,11 +31,15 @@ header {
 }
 
 /* Navigation */
+nav {
+    background: #BB0000;
+    padding: 1rem;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-top: 10px;
 }
 
 nav ul li {
@@ -50,15 +54,48 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #d0d0d0;
+    color: #CCCCCC;
+}
+
+/* Mobile Dropdown Menu */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        text-align: right;
+        padding: 1rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #BB0000;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 6rem 1rem;
-    background-color: #d6d6d6; /* Light gray for elegance */
-    color: #212529;
+    background-color: #666666; /* Ohio State Gray */
+    color: #FFFFFF; /* White text */
 }
 
 .hero h1 {
@@ -70,6 +107,24 @@ nav ul li a:hover {
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+}
+
+/* Rotating Images */
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-slider img {
+    width: 100%;
+    display: none;
+}
+
+.image-slider img.active {
+    display: block;
 }
 
 /* Buttons */
@@ -88,7 +143,7 @@ nav ul li a:hover {
 }
 
 .button:hover {
-    background-color: #b22222; /* Darker Scarlet */
+    background-color: #990000; /* Darker Scarlet */
 }
 
 /* Sections */
@@ -99,7 +154,7 @@ section {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin-bottom: 2rem; /* Space between sections */
+    margin-bottom: 2rem;
 }
 
 /* Footer */
@@ -115,10 +170,6 @@ footer {
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 5px 0;
     }
 
     .hero h1 {
