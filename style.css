@@ -34,6 +34,7 @@ header {
 nav {
     background: #BB0000;
     padding: 1rem;
+    position: relative;
 }
 
 nav ul {
@@ -92,6 +93,7 @@ nav ul li a:hover {
     border-bottom: none;
 }
 
+/* Responsive Navigation */
 @media (max-width: 768px) {
     .menu-icon {
         display: block; /* Show menu icon on mobile */
@@ -103,6 +105,16 @@ nav ul li a:hover {
 
     nav ul.show {
         display: flex; /* Show when toggled */
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        box-shadow: none;
     }
 }
 
