@@ -34,7 +34,6 @@ header {
 nav {
     background: #BB0000;
     padding: 1rem;
-    position: relative;
 }
 
 nav ul {
@@ -56,66 +55,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #CCCCCC;
-}
-
-/* Mobile Dropdown Menu */
-.menu-icon {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-#nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #BB0000; /* Ohio State Scarlet */
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-#nav-links.show {
-    display: flex;
-}
-
-#nav-links li {
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid #990000;
-}
-
-#nav-links li:last-child {
-    border-bottom: none;
-}
-
-/* Responsive Navigation */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block; /* Show menu icon on mobile */
-    }
-
-    nav ul {
-        display: none; /* Hide by default */
-    }
-
-    nav ul.show {
-        display: flex; /* Show when toggled */
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 769px) {
-    #nav-links {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        box-shadow: none;
-    }
 }
 
 /* Hero Section */
