@@ -21,7 +21,7 @@ setInterval(rotateImages, 3000); // Rotate every 3 seconds
 // Contact Form Validation
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('#contact-form');
-
+/*
     if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
             const name = document.querySelector('#name').value.trim();
@@ -42,4 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
+    */
 });
