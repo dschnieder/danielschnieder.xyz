@@ -18,9 +18,23 @@ function rotateImages() {
 
 setInterval(rotateImages, 3000); // Rotate every 3 seconds
 
-// Contact Form Validation
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('#contact-form');
+document.addEventListener("DOMContentLoaded", () => {
+    // Dropdown menu toggle
+    const menuIcon = document.getElementById("menu-icon");
+    const navLinks = document.getElementById("nav-links");
+
+    menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!menuIcon.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove("show");
+        }
+    });
+});
+
 /*
     if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
@@ -43,4 +57,3 @@ document.addEventListener('DOMContentLoaded', () => {
         return emailRegex.test(email);
     }
     */
-});
