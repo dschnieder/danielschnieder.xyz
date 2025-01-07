@@ -1,60 +1,33 @@
-// Image Slider Script
-let slideIndex = 0;
-const slides = document.querySelectorAll('.image-slider img');
+document.addEventListener('DOMContentLoaded', () => {
+    // Image Rotator
+    const images = document.querySelectorAll('.image-slider img');
+    let currentImageIndex = 0;
 
-function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
+    function showNextImage() {
+        images[currentImageIndex].classList.remove('active');
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].classList.add('active');
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
+
+    setInterval(showNextImage, 3000);
+
+    // Scroll Animation
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    function checkFadeIn() {
+        const triggerBottom = window.innerHeight * 0.8;
+
+        fadeInElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < triggerBottom) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
     }
-    slides[slideIndex - 1].classList.add('active');
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
 
-showSlides();
-
-const sections = document.querySelectorAll('section');
-
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const triggerPoint = window.innerHeight - 100; // Start animation earlier
-        if (sectionTop < triggerPoint) {
-            section.classList.add('show');
-        }
-    });
-});
-
-const header = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-const navLinks = document.querySelectorAll('nav ul li a');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100; // Offset for better timing
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
-    });
+    window.addEventListener('scroll', checkFadeIn);
+    checkFadeIn(); // Trigger once on load
 });
