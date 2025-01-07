@@ -97,10 +97,13 @@ nav ul li a:hover {
 .image-slider img {
     width: 100%;
     display: none;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Smooth transition */
 }
 
 .image-slider img.active {
     display: block;
+    opacity: 1; /* Fades in the active image */
 }
 
 /* Buttons */
@@ -115,11 +118,12 @@ nav ul li a:hover {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .button:hover {
     background-color: #990000; /* Darker Scarlet */
+    transform: scale(1.1); /* Slightly enlarges button */
 }
 
 /* Sections */
@@ -156,3 +160,32 @@ footer {
         font-size: 1.1rem;
     }
 }
+
+section {
+    opacity: 0;
+    transform: translateY(20px); /* Starts slightly lower */
+    transition: all 0.6s ease-in-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0); /* Moves to its normal position */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+}
+
+nav ul li a.active {
+    color: #CCCCCC; /* Highlighted color */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
