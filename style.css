@@ -28,6 +28,14 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow */
 }
 
 /* Navigation */
@@ -55,6 +63,12 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #CCCCCC;
+}
+
+nav ul li a.active {
+    color: #CCCCCC; /* Highlighted color */
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 /* Hero Section */
@@ -87,11 +101,8 @@ nav ul li a:hover {
     position: relative;
     width: 100%;
     max-width: 900px;
-    margin: 0 auto; /* Centers horizontally */
+    margin: 0 auto;
     overflow: hidden;
-    display: flex; /* Ensures it's treated as a flex container */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
 }
 
 .image-slider img {
@@ -135,6 +146,14 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
     margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px); /* Starts slightly lower */
+    transition: all 0.6s ease-in-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0); /* Moves to its normal position */
 }
 
 /* Footer */
@@ -160,32 +179,3 @@ footer {
         font-size: 1.1rem;
     }
 }
-
-section {
-    opacity: 0;
-    transform: translateY(20px); /* Starts slightly lower */
-    transition: all 0.6s ease-in-out;
-}
-
-section.show {
-    opacity: 1;
-    transform: translateY(0); /* Moves to its normal position */
-}
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: box-shadow 0.3s ease;
-}
-
-header.scrolled {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow */
-}
-
-nav ul li a.active {
-    color: #CCCCCC; /* Highlighted color */
-    text-decoration: underline;
-    font-weight: bold;
-}
-
