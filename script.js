@@ -47,31 +47,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+let slides, dots, timer;
 
-// Next/previous controls
+// Initialize slideshow
+function initSlides() {
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    showSlides(slideIndex);
+    startAutoSlide();
+}
+
+// Show specific slide
+function showSlides(index) {
+    if (index >= slides.length) { slideIndex = 0; } // Loop back to start
+    if (index < 0) { slideIndex = slides.length - 1; } // Go to end
+
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    // Remove active status from dots
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // Display the current slide and highlight the dot
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].className += " active";
+}
+
+// Navigate slides manually
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    clearInterval(timer); // Stop auto-slide
+    slideIndex += n;
+    showSlides(slideIndex);
+    startAutoSlide(); // Restart auto-slide
 }
 
-// Thumbnail image controls
+// Go to specific slide when clicking a dot
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    clearInterval(timer); // Stop auto-slide
+    slideIndex = n - 1;
+    showSlides(slideIndex);
+    startAutoSlide(); // Restart auto-slide
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+// Automatically advance slides
+function startAutoSlide() {
+    timer = setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 3000); // Change image every 3 seconds
 }
+
+// Initialize slideshow after DOM loads
+document.addEventListener('DOMContentLoaded', initSlides);
