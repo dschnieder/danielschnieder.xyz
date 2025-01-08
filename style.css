@@ -116,17 +116,24 @@ nav ul li a:hover::after {
 .image-slider {
     position: relative;
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 900px; /* Controls slider width */
+    height: 500px; /* Set a fixed height or use 'min-height' */
+    margin: 0 auto; /* Centers the slider horizontally */
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 8px; /* Smooth edges */
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
 }
 
 .image-slider img {
-    width: 100%;
+    width: auto; /* Maintain image aspect ratio */
+    height: 100%; /* Scale to fill the container height */
+    max-width: 100%; /* Prevent images from overflowing */
+    object-fit: contain; /* Ensures the whole image is visible */
     opacity: 0;
     position: absolute;
-    transition: opacity 1.2s ease-in-out;
+    transition: opacity 1.2s ease-in-out; /* Smooth transition */
 }
 
 .image-slider img.active {
