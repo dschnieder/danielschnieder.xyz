@@ -131,6 +131,15 @@ nav ul li a:hover, nav ul li a.active {
     background-color: #990000;
 }
 
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0; /* Initially no width */
+  background-color: cyan;
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transitions */
+}
+
 /* Sections */
 section {
     padding: 2rem;
