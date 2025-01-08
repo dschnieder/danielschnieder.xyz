@@ -32,10 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFadeIn(); // Trigger once on load
 
     // Highlight Active Navigation Menu Item
-    document.querySelectorAll('.link').forEach(item => {
-    item.addEventListener('click', () => {
-        const underline = document.querySelector('.underline');
-        underline.style.width = item.offsetWidth + 'px';
-        underline.style.left = item.offsetLeft + 'px';
+    const navLinks = document.querySelectorAll('nav ul li a'); // Matches CSS selectors
+
+    function updateActiveLink(event) {
+        // Remove 'active' from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add 'active' class to the clicked link
+        event.target.classList.add('active');
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', updateActiveLink);
     });
 });
