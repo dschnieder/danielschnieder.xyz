@@ -53,12 +53,9 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a.active {
     color: #CCCCCC;
-}
-
-nav ul li a.active {
-    border-bottom: 2px solid white;
+    text-decoration: underline; /* Highlight active page */
 }
 
 /* Hero Section */
@@ -66,10 +63,6 @@ nav ul li a.active {
     text-align: center;
     padding: 6rem 1rem;
     background-color: #F3F3F3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .hero section {
@@ -83,11 +76,13 @@ nav ul li a.active {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .hero .button {
@@ -97,7 +92,7 @@ nav ul li a.active {
 
 /* Image Slider */
 .image-slider {
-    position: center;
+    position: relative;
     width: 100%;
     max-width: 900px;
     margin: 0 auto; /* Centers the slider */
@@ -107,14 +102,14 @@ nav ul li a.active {
 
 .image-slider img {
     width: 100%;
-    display: none;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    position: absolute;
+    transition: opacity 1.2s ease-in-out; /* Smooth transition */
 }
 
 .image-slider img.active {
-    display: block;
     opacity: 1;
+    position: relative;
 }
 
 /* Buttons */
