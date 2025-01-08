@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFadeIn(); // Trigger once on load
 
     // Highlight Active Navigation Menu Item
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add('active'); // Add 'active' class to highlight
-        }
+    document.querySelectorAll('.link').forEach(item => {
+    item.addEventListener('click', () => {
+        const underline = document.querySelector('.underline');
+        underline.style.width = item.offsetWidth + 'px';
+        underline.style.left = item.offsetLeft + 'px';
     });
 });
