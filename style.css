@@ -13,7 +13,7 @@ html {
 /* Body */
 body {
     background-color: #F3F3F3;
-    color: #000000; /* Ensures text is visible */
+    color: #000000;
     font-size: 18px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
@@ -50,12 +50,34 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
 }
 
-nav ul li a:hover, nav ul li a.active {
-    color: #CCCCCC;
-    text-decoration: underline; /* Highlight active page */
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -95,16 +117,16 @@ nav ul li a:hover, nav ul li a.active {
     position: relative;
     width: 100%;
     max-width: 900px;
-    margin: 0 auto; /* Centers the slider */
+    margin: 0 auto;
     overflow: hidden;
-    border-radius: 8px; /* Smooth edges */
+    border-radius: 8px;
 }
 
 .image-slider img {
     width: 100%;
     opacity: 0;
     position: absolute;
-    transition: opacity 1.2s ease-in-out; /* Smooth transition */
+    transition: opacity 1.2s ease-in-out;
 }
 
 .image-slider img.active {
@@ -129,15 +151,6 @@ nav ul li a:hover, nav ul li a.active {
 
 .button:hover {
     background-color: #990000;
-}
-
-.underline {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 0; /* Initially no width */
-  background-color: #FFFFFF;
-  transition: width 0.3s ease, left 0.3s ease; /* Smooth transitions */
 }
 
 /* Sections */
