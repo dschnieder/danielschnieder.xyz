@@ -136,7 +136,7 @@ nav ul li a:hover, nav ul li a.active {
   bottom: 0;
   height: 2px;
   width: 0; /* Initially no width */
-  background-color: cyan;
+  background-color: #FFFFFF;
   transition: width 0.3s ease, left 0.3s ease; /* Smooth transitions */
 }
 
@@ -161,6 +161,12 @@ section {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+    text-align: center;
+}
+
+.fade-in.visible .button {
+    display: inline-block;
+    margin: 0 auto;
 }
 
 /* Footer */
