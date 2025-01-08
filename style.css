@@ -112,6 +112,12 @@ nav ul li a:hover::after {
     margin: 0 auto;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Image Slider */
 .image-slider {
     position: relative;
