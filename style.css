@@ -117,24 +117,31 @@ nav ul li a:hover::after {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    margin: auto;
-    width: 100%; /* Full width of the screen */
-    max-width: 800px; /* Limit maximum width */
-    height: auto; /* Maintain proportional height */
+    max-width: 90%; /* Set max width of the slideshow relative to the screen */
+    margin: auto; /* Center the slideshow */
+    overflow: hidden; /* Ensure no overflow outside the container */
 }
+
+/* Slideshow images */
+.slideshow-container img {
+    width: 100%; /* Scale the images to fit the slideshow container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the full image is visible without being cut off */
+    max-height: 500px; /* Set a maximum height to avoid overly tall images */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .slideshow-container img {
+        max-height: 300px; /* Reduce maximum height for mobile screens */
+    }
+}
+
 
 /* Slides */
 .mySlides {
     display: none;
     text-align: center; /* Center-align images */
-}
-
-/* Responsive image styling */
-.mySlides img {
-    width: 80%; /* Make images smaller (adjust percentage as needed) */
-    max-width: 600px; /* Limit maximum width for large screens */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Prevent images from being cropped */
 }
 
 /* Next & previous buttons */
