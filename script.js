@@ -53,29 +53,27 @@ function showSlides() {
     const slides = document.querySelectorAll(".mySlides");
     const dots = document.querySelectorAll(".dot");
 
-    slides.forEach((slide, index) => {
-        slide.style.display = "none";
-    });
+    // Hide all slides
+    slides.forEach((slide) => (slide.style.display = "none"));
 
-    dots.forEach(dot => dot.classList.remove("active-dot"));
+    // Remove "active" class from all dots
+    dots.forEach((dot) => dot.classList.remove("active-dot"));
 
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-
+    // Show the current slide and highlight the current dot
+    slideIndex = (slideIndex + 1 > slides.length) ? 1 : slideIndex + 1;
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].classList.add("active-dot");
 
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+    // Auto-transition every 3 seconds
+    setTimeout(showSlides, 3000);
 }
 
-// Initialize slideshow
-showSlides();
-
-// Add manual navigation functionality
+// Manual controls
 function plusSlides(n) {
     slideIndex += n - 1;
+    if (slideIndex >= document.querySelectorAll(".mySlides").length) {
+        slideIndex = 0;
+    }
     showSlides();
 }
 
@@ -83,3 +81,9 @@ function currentSlide(n) {
     slideIndex = n - 1;
     showSlides();
 }
+
+// Initialize slideshow
+document.addEventListener("DOMContentLoaded", () => {
+    slideIndex = 0; // Start at first slide
+    showSlides(); // Start slideshow
+});
