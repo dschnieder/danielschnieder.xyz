@@ -117,7 +117,7 @@ nav ul li a:hover::after {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 70%; /* Adjust to control slideshow width */
+    max-width: 70%; /* Adjust slideshow width */
     margin: auto;
     overflow: hidden;
 }
@@ -126,17 +126,17 @@ nav ul li a:hover::after {
 .slideshow-container img {
     width: 100%; /* Full width of the container */
     height: auto;
-    object-fit: contain; /* Ensure images fit inside the container without being cut off */
+    object-fit: contain; /* Ensure images fit without being cut off */
     max-height: 400px; /* Limit image height */
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive design */
 @media screen and (max-width: 768px) {
     .slideshow-container {
-        max-width: 90%; /* Allow a wider container for smaller devices */
+        max-width: 90%; /* Allow wider width for smaller screens */
     }
     .slideshow-container img {
-        max-height: 300px; /* Adjust image height for smaller screens */
+        max-height: 300px; /* Smaller height for mobile devices */
     }
 }
 
@@ -145,29 +145,23 @@ nav ul li a:hover::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 16px;
     color: white;
-    font-weight: bold;
     font-size: 18px;
-    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
+    cursor: pointer;
     z-index: 1000;
-    width: 40px; /* Fixed size for buttons */
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; /* Make buttons circular */
+    border-radius: 50%;
 }
 
-/* Position for arrow buttons */
 .prev {
-    left: 10px; /* Closer to the edge */
+    left: 20px; /* Closer to the left edge */
 }
 
 .next {
-    right: 10px; /* Closer to the edge */
+    right: 20px; /* Closer to the right edge */
 }
 
 /* Dots container */
