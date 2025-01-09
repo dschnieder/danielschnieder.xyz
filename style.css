@@ -117,26 +117,26 @@ nav ul li a:hover::after {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 70%; /* Adjust the slideshow width */
+    max-width: 70%; /* Adjust to control slideshow width */
     margin: auto;
     overflow: hidden;
 }
 
 /* Slideshow images */
 .slideshow-container img {
-    width: 100%;
+    width: 100%; /* Full width of the container */
     height: auto;
-    object-fit: contain;
+    object-fit: contain; /* Ensure images fit inside the container without being cut off */
     max-height: 400px; /* Limit image height */
 }
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     .slideshow-container {
-        max-width: 90%;
+        max-width: 90%; /* Allow a wider container for smaller devices */
     }
     .slideshow-container img {
-        max-height: 300px;
+        max-height: 300px; /* Adjust image height for smaller screens */
     }
 }
 
@@ -153,7 +153,7 @@ nav ul li a:hover::after {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     z-index: 1000;
-    width: 40px; /* Set a fixed size for buttons */
+    width: 40px; /* Fixed size for buttons */
     height: 40px;
     display: flex;
     align-items: center;
@@ -161,26 +161,25 @@ nav ul li a:hover::after {
     border-radius: 50%; /* Make buttons circular */
 }
 
-/* Left button position */
+/* Position for arrow buttons */
 .prev {
-    left: 15px; /* Closer to the edge */
+    left: 10px; /* Closer to the edge */
 }
 
-/* Right button position */
 .next {
-    right: 15px; /* Closer to the edge */
+    right: 10px; /* Closer to the edge */
 }
 
 /* Dots container */
 .dots-container {
     text-align: center;
-    margin-top: 15px; /* Add space between slideshow and dots */
+    margin-top: 15px; /* Space between slideshow and dots */
 }
 
 /* Style the dots */
 .dot {
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
