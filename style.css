@@ -117,101 +117,65 @@ nav ul li a:hover::after {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 90%; /* Set max width of the slideshow relative to the screen */
-    margin: auto; /* Center the slideshow */
-    overflow: hidden; /* Ensure no overflow outside the container */
+    max-width: 70%; /* Reduce the overall size of the slideshow container */
+    margin: auto;
+    overflow: hidden;
 }
 
 /* Slideshow images */
 .slideshow-container img {
-    width: 100%; /* Scale the images to fit the slideshow container */
+    width: 100%; /* Ensure images fill the container */
     height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the full image is visible without being cut off */
-    max-height: 500px; /* Set a maximum height to avoid overly tall images */
+    object-fit: contain; /* Ensure no part of the image is cropped */
+    max-height: 400px; /* Limit the image height for better control */
 }
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
+    .slideshow-container {
+        max-width: 90%; /* Expand width slightly on smaller screens */
+    }
     .slideshow-container img {
-        max-height: 300px; /* Reduce maximum height for mobile screens */
+        max-height: 300px; /* Reduce max height for smaller screens */
     }
 }
 
-
-/* Slides */
-.mySlides {
-    display: none;
-    text-align: center; /* Center-align images */
-}
-
-/* Next & previous buttons */
+/* Slideshow navigation buttons */
 .prev, .next {
-    cursor: pointer;
     position: absolute;
-    top: 50%; /* Vertically center */
-    transform: translateY(-50%); /* Adjust for vertical alignment */
-    width: 50px; /* Set a fixed width for the buttons */
-    height: 50px; /* Set a fixed height for the buttons */
-    padding: 0; /* Remove padding for consistency */
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    border-radius: 50%; /* Make buttons circular */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    text-align: center;
-    line-height: 50px; /* Center text vertically within the circle */
-    user-select: none;
-    z-index: 10; /* Ensure arrows appear above images */
-}
-
-/* Position the left (prev) arrow */
-.prev {
-    left: 15px; /* Adjust the distance from the left edge */
-}
-
-/* Position the right (next) arrow */
-.next {
-    right: 15px; /* Adjust the distance from the right edge */
-}
-
-/* Arrow hover effect */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
-}
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    .prev, .next {
-        width: 40px; /* Smaller arrow size */
-        height: 40px;
-        font-size: 16px;
-        line-height: 40px;
-    }
-
-    .prev {
-        left: 10px; /* Reduce distance from edge */
-    }
-
-    .next {
-        right: 10px; /* Reduce distance from edge */
-    }
-}
-
-/* Dots (indicator circles) */
-.dot-container {
-    text-align: center;
-    padding: 10px;
-}
-
-.dot {
     cursor: pointer;
-    height: 10px;
-    width: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    border: none;
+    z-index: 1000;
+}
+
+/* Position dots below slideshow */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Style the dots */
+.dot {
+    height: 15px;
+    width: 15px;
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.3s ease;
+}
+
+/* Highlight the active dot */
+.active-dot {
+    background-color: #555; /* Darker gray for the active dot */
 }
 
 /* Fading animation */
