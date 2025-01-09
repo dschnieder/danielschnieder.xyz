@@ -114,27 +114,23 @@ nav ul li a:hover::after {
 
 * {box-sizing:border-box}
 
-/* Slideshow container */
 .slideshow-container {
     position: relative;
     margin: auto;
-    width: 100%; /* Full width of the screen */
-    max-width: 800px; /* Limit maximum width */
-    height: auto; /* Maintain proportional height */
+    max-width: 800px; /* Maximum container width */
+    overflow: hidden; /* Hide overflow for neatness */
+}
+
+.mySlides img {
+    width: 100%; /* Scale images to fit container */
+    max-height: 500px; /* Set a max height for large images */
+    object-fit: contain; /* Ensure images don't get distorted */
 }
 
 /* Slides */
 .mySlides {
     display: none;
     text-align: center; /* Center-align images */
-}
-
-/* Responsive image styling */
-.mySlides img {
-    width: 80%; /* Make images smaller (adjust percentage as needed) */
-    max-width: 600px; /* Limit maximum width for large screens */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Prevent images from being cropped */
 }
 
 /* Next & previous buttons */
