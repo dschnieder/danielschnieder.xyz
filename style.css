@@ -117,73 +117,94 @@ nav ul li a:hover::after {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 70%; /* Adjust slideshow width */
     margin: auto;
-    overflow: hidden;
+    width: 100%; /* Full width of the screen */
+    max-width: 800px; /* Limit maximum width */
+    height: auto; /* Maintain proportional height */
 }
 
-/* Slideshow images */
-.slideshow-container img {
-    width: 100%; /* Full width of the container */
-    height: auto;
-    object-fit: contain; /* Ensure images fit without being cut off */
-    max-height: 400px; /* Limit image height */
+/* Slides */
+.mySlides {
+    display: none;
+    text-align: center; /* Center-align images */
 }
 
-/* Responsive design */
-@media screen and (max-width: 768px) {
-    .slideshow-container {
-        max-width: 90%; /* Allow wider width for smaller screens */
-    }
-    .slideshow-container img {
-        max-height: 300px; /* Smaller height for mobile devices */
-    }
+/* Responsive image styling */
+.mySlides img {
+    width: 80%; /* Make images smaller (adjust percentage as needed) */
+    max-width: 600px; /* Limit maximum width for large screens */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent images from being cropped */
 }
 
-/* Navigation buttons */
+/* Next & previous buttons */
 .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
     cursor: pointer;
-    z-index: 1000;
-    border-radius: 50%;
-}
-
-.prev {
-    left: 20px; /* Closer to the left edge */
-}
-
-.next {
-    right: 20px; /* Closer to the right edge */
-}
-
-/* Dots container */
-.dots-container {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+    width: 50px; /* Set a fixed width for the buttons */
+    height: 50px; /* Set a fixed height for the buttons */
+    padding: 0; /* Remove padding for consistency */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50%; /* Make buttons circular */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     text-align: center;
-    margin-top: 15px; /* Space between slideshow and dots */
+    line-height: 50px; /* Center text vertically within the circle */
+    user-select: none;
+    z-index: 10; /* Ensure arrows appear above images */
 }
 
-/* Style the dots */
+/* Position the left (prev) arrow */
+.prev {
+    left: 15px; /* Adjust the distance from the left edge */
+}
+
+/* Position the right (next) arrow */
+.next {
+    right: 15px; /* Adjust the distance from the right edge */
+}
+
+/* Arrow hover effect */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .prev, .next {
+        width: 40px; /* Smaller arrow size */
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .prev {
+        left: 10px; /* Reduce distance from edge */
+    }
+
+    .next {
+        right: 10px; /* Reduce distance from edge */
+    }
+}
+
+/* Dots (indicator circles) */
+.dot-container {
+    text-align: center;
+    padding: 10px;
+}
+
 .dot {
-    height: 12px;
-    width: 12px;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-/* Highlight the active dot */
-.active-dot {
-    background-color: #555; /* Darker gray for the active dot */
+    transition: background-color 0.6s ease;
 }
 
 /* Fading animation */
