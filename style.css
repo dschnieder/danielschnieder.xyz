@@ -117,17 +117,17 @@ nav ul li a:hover::after {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 70%; /* Reduce the overall size of the slideshow container */
+    max-width: 70%; /* Reduced width for a smaller slideshow */
     margin: auto;
     overflow: hidden;
 }
 
 /* Slideshow images */
 .slideshow-container img {
-    width: 100%; /* Ensure images fill the container */
+    width: 100%; /* Images fill the container width */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure no part of the image is cropped */
-    max-height: 400px; /* Limit the image height for better control */
+    max-height: 400px; /* Limit the image height */
 }
 
 /* Responsive adjustments for smaller screens */
@@ -140,23 +140,32 @@ nav ul li a:hover::after {
     }
 }
 
-/* Slideshow navigation buttons */
+/* Navigation buttons */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border: none;
     z-index: 1000;
 }
 
-/* Position dots below slideshow */
+/* Left button position */
+.prev {
+    left: 10px; /* Keep it to the left of the container */
+}
+
+/* Right button position */
+.next {
+    right: 10px; /* Keep it to the right of the container */
+}
+
+/* Center dots below the slideshow */
 .dots-container {
     text-align: center;
     margin-top: 10px;
