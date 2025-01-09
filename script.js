@@ -48,58 +48,46 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let slideIndex = 0;
-let slides, dots, timer;
+let slides = document.querySelectorAll('.slideshow-container img');
+let dots = document.querySelectorAll('.dot');
 
-// Initialize slideshow
-function initSlides() {
-    slides = document.getElementsByClassName("mySlides");
-    dots = document.getElementsByClassName("dot");
-    showSlides(slideIndex);
-    startAutoSlide();
-}
-
-// Show specific slide
 function showSlides(index) {
-    if (index >= slides.length) { slideIndex = 0; } // Loop back to start
-    if (index < 0) { slideIndex = slides.length - 1; } // Go to end
+    if (index >= slides.length) slideIndex = 0;
+    if (index < 0) slideIndex = slides.length - 1;
 
     // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    // Remove active status from dots
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
+    slides.forEach(slide => slide.style.display = 'none');
 
-    // Display the current slide and highlight the dot
-    slides[slideIndex].style.display = "block";
-    dots[slideIndex].className += " active";
+    // Remove active-dot class from all dots
+    dots.forEach(dot => dot.classList.remove('active-dot'));
+
+    // Show the current slide and activate the corresponding dot
+    slides[slideIndex].style.display = 'block';
+    dots[slideIndex].classList.add('active-dot');
 }
 
-// Navigate slides manually
-function plusSlides(n) {
-    clearInterval(timer); // Stop auto-slide
-    slideIndex += n;
+function nextSlide() {
+    slideIndex++;
     showSlides(slideIndex);
-    startAutoSlide(); // Restart auto-slide
 }
 
-// Go to specific slide when clicking a dot
-function currentSlide(n) {
-    clearInterval(timer); // Stop auto-slide
-    slideIndex = n - 1;
+function prevSlide() {
+    slideIndex--;
     showSlides(slideIndex);
-    startAutoSlide(); // Restart auto-slide
 }
 
-// Automatically advance slides
-function startAutoSlide() {
-    timer = setInterval(() => {
-        slideIndex++;
+// Automatic slideshow
+setInterval(() => {
+    nextSlide();
+}, 3000); // Change slides every 3 seconds
+
+// Initial display setup
+showSlides(slideIndex);
+
+// Attach event listeners to dots for manual navigation
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        slideIndex = index;
         showSlides(slideIndex);
-    }, 3000); // Change image every 3 seconds
-}
-
-// Initialize slideshow after DOM loads
-document.addEventListener('DOMContentLoaded', initSlides);
+    });
+});
