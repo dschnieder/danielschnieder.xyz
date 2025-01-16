@@ -80,7 +80,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Hero Section */
+/* Home Section */
 .hero {
     text-align: center;
     padding: 6rem 1rem; /* Adjust top and bottom padding as needed */
@@ -89,29 +89,58 @@ nav ul li a:hover::after {
 }
 
 
-.hero section {
+.home section {
     background-color: #3f4443;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.hero h1 {
+.home h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
     text-align: center;
 }
 
-.hero p {
+.home p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     text-align: center;
 }
 
-.hero .button {
+.home .button {
     display: inline-block;
     margin: 0 auto;
+}
+
+/* Other Section */
+.other {
+    text-align: left;
+    padding: 1rem 1rem; /* Adjust top and bottom padding as needed */
+    background-color: #FFFFFF; /* Change to a softer color */
+    margin-top: 2rem; /* Adds space between header and section */
+}
+
+
+.other section {
+    background-color: #3f4443;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.other h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.other p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 * {box-sizing:border-box}
@@ -240,7 +269,7 @@ section {
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #3f4443; /* Softer white */
+    background-color: #868e92; /* Softer white */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
