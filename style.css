@@ -84,7 +84,7 @@ nav ul li a:hover::after {
 .hero {
     text-align: center;
     padding: 6rem 1rem; /* Adjust top and bottom padding as needed */
-    background-color: #EDEDED; /* Change to a softer color */
+    background-color: #FFFFFF; /* Change to a softer color */
     margin-top: 2rem; /* Adds space between header and hero section */
 }
 
