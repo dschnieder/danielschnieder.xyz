@@ -140,8 +140,8 @@ nav ul li a:hover::after {
 }
 
 .other h2 {
-    font-size: 1.50rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
     font-weight: bold;
     text-align: left;
 }
