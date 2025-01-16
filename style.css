@@ -12,7 +12,7 @@ html {
 
 /* Body */
 body {
-    background-color: #3f4443;
+    background-color: #868e92;
     color: #000000;
     font-size: 18px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -90,7 +90,7 @@ nav ul li a:hover::after {
 
 
 .home section {
-    background-color: #3f4443;
+    background-color: #868e92;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -124,7 +124,7 @@ nav ul li a:hover::after {
 
 
 .other section {
-    background-color: #3f4443;
+    background-color: #868e92;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -269,7 +269,7 @@ section {
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #868e92; /* Softer white */
+    background-color: #FFFFFF; /* Home text box */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
