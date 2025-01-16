@@ -21,6 +21,8 @@ body {
 
 /* Header */
 header {
+    border-top: 2px solid white; /* Adds a black line at the top */
+    border-bottom: 2px solid white; /* Adds a white line at the bottom */
     background: #BB0000;
     padding: 1rem;
     color: white;
@@ -43,7 +45,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 25px;
 }
 
 nav ul li a {
