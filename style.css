@@ -12,7 +12,7 @@ html {
 
 /* Body */
 body {
-    background-color: #000000; /*#cfd4d8;*/
+    background-color: #212325; /*#cfd4d8;*/
     color: #000000;
     font-size: 18px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -92,7 +92,7 @@ nav ul li a:hover::after {
 
 
 .home section {
-    background-color: #000000; /*#cfd4d8;*/
+    background-color: #212325; /*#cfd4d8;*/
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -126,7 +126,7 @@ nav ul li a:hover::after {
 
 
 .other section {
-    background-color: #000000; /*#cfd4d8;*/
+    background-color: #212325; /*#cfd4d8;*/
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -137,6 +137,13 @@ nav ul li a:hover::after {
     margin-bottom: 1rem;
     font-weight: bold;
     text-align: center;
+}
+
+.other h2 {
+    font-size: 1.50rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: left;
 }
 
 .other p {
