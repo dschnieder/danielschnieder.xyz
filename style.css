@@ -297,6 +297,8 @@ section {
 
 /* Footer */
 footer {
+    border-top: 2px solid white; /* Adds a black line at the top */
+    border-bottom: 2px solid white; /* Adds a white line at the bottom */
     text-align: center;
     padding: 1rem;
     background: #BB0000;
