@@ -151,6 +151,7 @@ nav ul li a:hover::after {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     margin-left: 4rem;
+    margin-right: 4rem;
     text-align: left;
 }
 
