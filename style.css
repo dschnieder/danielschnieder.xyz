@@ -149,6 +149,16 @@ nav ul li a:hover::after {
     text-align: left;
 }
 
+.other ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.other ul li {
+    margin: 0 25px;
+}
+
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
