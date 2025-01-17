@@ -157,6 +157,7 @@ nav ul li a:hover::after {
 }
 
 .other ul li {
+    padding: 2rem;
     margin: 0, 2rem, 2rem, 2rem;
     font-size: 1.25rem;
 }
