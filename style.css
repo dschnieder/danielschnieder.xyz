@@ -12,7 +12,7 @@ html {
 
 /* Body */
 body {
-    background-color: #212325; /*#cfd4d8;*/
+    background-color: #212325;
     color: #000000;
     font-size: 18px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -21,8 +21,8 @@ body {
 
 /* Header */
 header {
-    border-top: 2px solid white; /* Adds a black line at the top */
-    border-bottom: 2px solid white; /* Adds a white line at the bottom */
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
     background: #BB0000;
     padding: 1rem;
     color: white;
@@ -85,14 +85,13 @@ nav ul li a:hover::after {
 /* Home Section */
 .home {
     text-align: center;
-    padding: 6rem 1rem; /* Adjust top and bottom padding as needed */
-    background-color: #FFFFFF; /* Change to a softer color */
-    margin-top: 2rem; /* Adds space between header and hero section */
+    padding: 6rem 1rem;
+    background-color: #FFFFFF;
+    margin-top: 2rem;
 }
 
-
 .home section {
-    background-color: #212325; /*#cfd4d8;*/
+    background-color: #212325;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -119,14 +118,13 @@ nav ul li a:hover::after {
 /* Other Section */
 .other {
     text-align: left;
-    padding: 1rem 1rem; /* Adjust top and bottom padding as needed */
-    background-color: #FFFFFF; /* Change to a softer color */
-    margin-top: 2rem; /* Adds space between header and section */
+    padding: 1rem;
+    background-color: #FFFFFF;
+    margin-top: 2rem;
 }
 
-
 .other section {
-    background-color: #212325; /*#cfd4d8;*/
+    background-color: #212325;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -141,95 +139,83 @@ nav ul li a:hover::after {
 
 .other h2 {
     font-size: 1.75rem;
-    /*margin-bottom: 0.25rem;*/
-    font-weight: bold;
     margin-left: 2rem;
     text-align: left;
 }
 
 .other p {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin: 0 4rem 2rem 4rem;
     text-align: left;
 }
 
-* {box-sizing:border-box}
-
+/* Slideshow Styles */
 .slideshow-container {
     position: relative;
     margin: auto;
-    max-width: 800px; /* Maximum container width */
-    overflow: hidden; /* Hide overflow for neatness */
+    max-width: 800px;
+    overflow: hidden;
 }
 
 .mySlides img {
-    width: 100%; /* Scale images to fit container */
-    max-height: 500px; /* Set a max height for large images */
-    object-fit: contain; /* Ensure images don't get distorted */
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
 }
 
-/* Slides */
 .mySlides {
     display: none;
-    text-align: center; /* Center-align images */
+    text-align: center;
 }
 
-/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Vertically center */
-    transform: translateY(-50%); /* Adjust for vertical alignment */
-    width: 50px; /* Set a fixed width for the buttons */
-    height: 50px; /* Set a fixed height for the buttons */
-    padding: 0; /* Remove padding for consistency */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    padding: 0;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    border-radius: 50%; /* Make buttons circular */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
-    line-height: 50px; /* Center text vertically within the circle */
+    line-height: 50px;
     user-select: none;
-    z-index: 10; /* Ensure arrows appear above images */
+    z-index: 10;
 }
 
-/* Position the left (prev) arrow */
 .prev {
-    left: 15px; /* Adjust the distance from the left edge */
+    left: 15px;
 }
 
-/* Position the right (next) arrow */
 .next {
-    right: 15px; /* Adjust the distance from the right edge */
+    right: 15px;
 }
 
-/* Arrow hover effect */
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     .prev, .next {
-        width: 40px; /* Smaller arrow size */
+        width: 40px;
         height: 40px;
         font-size: 16px;
         line-height: 40px;
     }
 
     .prev {
-        left: 10px; /* Reduce distance from edge */
+        left: 10px;
     }
 
     .next {
-        right: 10px; /* Reduce distance from edge */
+        right: 10px;
     }
 }
 
-/* Dots (indicator circles) */
 .dot-container {
     text-align: center;
     padding: 10px;
@@ -244,17 +230,6 @@ nav ul li a:hover::after {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
 }
 
 /* Buttons */
@@ -276,12 +251,11 @@ nav ul li a:hover::after {
     background-color: #990000;
 }
 
-/* Sections */
 section {
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #FFFFFF; /* Home text box */
+    background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
@@ -306,8 +280,8 @@ section {
 
 /* Footer */
 footer {
-    border-top: 2px solid white; /* Adds a black line at the top */
-    border-bottom: 2px solid white; /* Adds a white line at the bottom */
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
     text-align: center;
     padding: 1rem;
     background: #BB0000;
@@ -315,7 +289,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
