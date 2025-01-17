@@ -150,13 +150,14 @@ nav ul li a:hover::after {
 }
 
 .other ul {
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    justify-content: left;
     list-style: none;
 }
 
 .other ul li {
-    margin: 0 25px;
+    margin: 0, 2rem, 2rem, 2rem;
+    font-size: 1.25rem;
 }
 
 /* Slideshow Styles */
