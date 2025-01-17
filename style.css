@@ -85,13 +85,13 @@ nav ul li a:hover::after {
 /* Bullet Points */
 ul {
     list-style-type: disc; /* Ensures bullets are displayed */
-    margin: 1.5rem 2rem; /* Adds spacing around lists */
-    padding-left: 1.5rem; /* Indents bullet points */
+    margin: 1rem 1rem; /* Adds spacing around lists */
+    padding-left: 1.75rem; /* Indents bullet points */
 }
 
 ul li {
     margin-bottom: 0.5rem; /* Adds space between list items */
-    font-size: 1rem;
+    font-size: 2rem;
     color: #000000; /* Black text for readability */
 }
 
