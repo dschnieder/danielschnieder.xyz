@@ -150,16 +150,14 @@ nav ul li a:hover::after {
 }
 
 .other ul {
-    /*display: flex;*/
-    justify-content: left;
-    /*list-style-type: none;*/
-    margin: 0, 2rem, 2rem, 2rem; 
+    padding-left: 2rem; /* Indents the list from the left side */
+    margin: 1rem 0; /* Adjusts spacing above and below the list */
 }
 
 .other ul li {
-    padding: 2rem;
-    margin: 0, 2rem, 2rem, 2rem;
-    font-size: 1.25rem;
+    padding-left: 0; /* Removes extra padding inside the list items */
+    margin: 0.5rem 0; /* Creates balanced spacing between list items */
+    font-size: 1.25rem; /* Maintains readability */
 }
 
 /* Slideshow Styles */
