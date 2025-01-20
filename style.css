@@ -150,7 +150,7 @@ nav ul li a:hover::after {
 }
 
 .other ul {
-    padding-left: 2rem; /* Indents the list from the left side */
+    padding-left: 3rem; /* Indents the list from the left side */
     margin: 1rem 0; /* Adjusts spacing above and below the list */
 }
 
