@@ -19,14 +19,6 @@ body {
     line-height: 1.6;
 }
 
-body.home section {
-    max-width: 1000px;
-}
-
-body.other section {
-    max-width: 1500px;
-}
-
 /* Header */
 header {
     border-top: 2px solid white;
@@ -275,7 +267,7 @@ nav ul li a:hover::after {
 
 section {
     padding: 2rem;
-    max-width: 1000px;
+    max-width: 1250px;
     margin: 0 auto;
     background-color: #FFFFFF;
     border-radius: 8px;
