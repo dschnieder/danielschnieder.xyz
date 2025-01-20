@@ -131,14 +131,14 @@ nav ul li a:hover::after {
 }
 
 .other h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
     text-align: center;
 }
 
 .other h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin-left: 2rem;
     text-align: left;
 }
