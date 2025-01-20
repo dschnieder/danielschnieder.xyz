@@ -95,6 +95,7 @@ nav ul li a:hover::after {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
 }
 
 .home h1 {
@@ -128,6 +129,7 @@ nav ul li a:hover::after {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
 }
 
 .other h1 {
