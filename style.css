@@ -19,6 +19,14 @@ body {
     line-height: 1.6;
 }
 
+body.home section {
+    max-width: 1000px;
+}
+
+body.other section {
+    max-width: 1500px;
+}
+
 /* Header */
 header {
     border-top: 2px solid white;
