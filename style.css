@@ -265,6 +265,7 @@ nav ul li a:hover::after {
     background-color: #990000;
 }
 
+/*
 section {
     padding: 2rem;
     max-width: 1500px;
@@ -274,6 +275,7 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
+*/
 
 /* Fade-in Animation */
 .fade-in {
