@@ -144,19 +144,20 @@ nav ul li a:hover::after {
 }
 
 .other p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin: 0 2rem 0.5rem 2rem;
     text-align: left;
 }
 
 .other ul {
     padding-left: 3rem; /* Indents the list from the left side */
-    margin: 1rem 0; /* Adjusts spacing above and below the list */
+    margin: 0.5rem 0rem 1rem; /* Adjusts spacing above and below the list */
 }
 
 .other ul li {
+    font-size: 1rem;
     padding-left: 0; /* Removes extra padding inside the list items */
-    margin: 0.5rem 0.5rem; /* Creates balanced spacing between list items */
+    margin: 0.25rem 0.5rem; /* Creates balanced spacing between list items */
     font-size: 1.25rem; /* Maintains readability */
 }
 
