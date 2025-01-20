@@ -163,6 +163,14 @@ nav ul li a:hover::after {
     font-size: 1.25rem; /* Maintains readability */
 }
 
+section.big {
+    max-width: 1500px;
+}
+
+section.small {
+    max-width: 1000px;
+}
+
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
