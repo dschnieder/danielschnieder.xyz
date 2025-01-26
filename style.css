@@ -82,13 +82,12 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Add a black background color to the top navigation */
+/*
 .topnav {
     background-color: #333;
     overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
     float: left;
     display: block;
@@ -99,22 +98,20 @@ nav ul li a:hover::after {
     font-size: 17px;
 }
 
-/* Add an active class to highlight the current page */
-/*
 .active {
     background-color: #f2f2f2;
     color: white;
 }
-*/
 
-/* Hide the link that should open and close the topnav on small screens */
+
 .topnav .icon {
     display: none;
 }
+*/
 
 /* Dropdown container - needed to position the dropdown content */
 .dropdown {
-    float: left;
+    float: center;
     overflow: hidden;
 }
 
@@ -134,8 +131,8 @@ nav ul li a:hover::after {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    background-color: #BB0000;
+    /*min-width: 160px;*/
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -144,7 +141,7 @@ nav ul li a:hover::after {
 .dropdown-content a {
     font-size: 1.25rem;
     float: none;
-    color: black;
+    color: white;
     padding: 6px 8px;
     text-decoration: none;
     display: block;
