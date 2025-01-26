@@ -6,14 +6,21 @@
 }
 
 a {
-  color: #6495ED;
-  text-decoration: none;
+  color: inherit; /* Keeps the same color as surrounding text */
+  text-decoration: none; /* Removes underline if desired */
 }
 
-a:visited,
-a:hover,
+a:visited {
+  color: inherit; /* Prevents color change for visited links */
+}
+
+a:hover {
+  color: inherit; /* Keeps the same color on hover */
+  text-decoration: none; /* Optional: prevents underline on hover */
+}
+
 a:active {
-  color: #6495ED; /* Same as the normal state */
+  color: inherit; /* Keeps the same color when clicked */
 }
 
 /* Smooth Scrolling */
