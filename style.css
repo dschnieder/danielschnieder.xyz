@@ -466,39 +466,41 @@ footer {
 }
 
 .collapsible {
-  background-color: white;
-  font-color: black;
-  cursor: pointer;
-  padding: 1rem;
-  width: 100%;
-  border-bottom: 5px solid #BB0000;
-  text-align: left;
-  outline: none;
-  font-size: 2rem;
+    background-color: white;
+    font-color: black;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border-color: transparent;
+    border-bottom: 5px solid #BB0000;
+    text-align: left;
+    outline: none;
+    font-size: 2rem;
 }
 
 .active, .collapsible:hover {
-  background-color: inherit; /*#555;*/
+    background-color: inherit; /*#555;*/
 }
 
 .collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  /*margin-left: 5px;*/
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    /*margin-left: 5px;*/
 }
 
 .active:after {
-  content: "\2212";
+    content: "\2212";
+    color: black;
 }
 
 .content {
-  /*padding: 0 18px;*/
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: white;
+    /*padding: 0 18px;*/
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: white;
 }
 
 @media (max-width: 768px) {
