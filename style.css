@@ -115,12 +115,10 @@ nav ul li a:hover::after {
     font-size: 17px;
 }
 
-/*
 .active {
     background-color: inherit;
     color: white;
 }
-*/
 
 .topnav .icon {
     display: none;
