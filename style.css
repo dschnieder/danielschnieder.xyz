@@ -468,7 +468,7 @@ footer {
 
 .collapsible {
     background-color: white;
-    font-color: black;
+    color: black;
     cursor: pointer;
     padding: 1rem;
     width: 100%;
@@ -480,13 +480,12 @@ footer {
 }
 
 .active, .collapsible:hover {
-    background-color: inherit; /*#555;*/
+    background-color: transparent; /*#555;*/
 }
 
 .collapsible:after {
     content: '\002B';
     color: black;
-    font-color: black;
     font-weight: bold;
     float: right;
     /*margin-left: 5px;*/
@@ -494,7 +493,6 @@ footer {
 
 .active:after {
     content: "\2212";
-    font-color: black;
     color: black;
 }
 
