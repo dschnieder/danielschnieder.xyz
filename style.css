@@ -290,16 +290,15 @@ nav ul li a:hover::after {
 .column {
     flex: 1 1 30%; /* Each column takes 30% of the available width, and shrinks if needed */
     padding: 10px;
-    height: 300px; /* You can remove this if you don't want a fixed height */
     background-color: #f1f1f1; /* Default background color */
 }
 
 .column h2 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .column p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* For responsive layout */
