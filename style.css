@@ -279,6 +279,36 @@ nav ul li a:hover::after {
     font-size: 1.25rem; /* Maintains readability */
 }
 
+/* 3-Column Layout */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the space between columns */
+}
+
+.column {
+    flex: 1 1 30%; /* Each column takes 30% of the available width, and shrinks if needed */
+    padding: 10px;
+    height: 300px; /* You can remove this if you don't want a fixed height */
+    background-color: #f1f1f1; /* Default background color */
+}
+
+.column h2 {
+    margin-bottom: 10px;
+}
+
+.column p {
+    margin-bottom: 10px;
+}
+
+/* For responsive layout */
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 100%; /* Stack columns on smaller screens */
+    }
+}
+
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
