@@ -145,6 +145,7 @@ nav ul li a:hover::after {
 /* Style the dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
+    border: 5px solid white;
     position: absolute;
     background-color: #BB0000;
     /*min-width: 160px;*/
