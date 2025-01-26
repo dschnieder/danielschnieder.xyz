@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+a {
+  color: #6495ED;
+  text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:active {
+  color: #6495ED; /* Same as the normal state */
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
