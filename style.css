@@ -110,7 +110,6 @@ nav ul li a:hover::after {
 .dropdown {
     float: center;
     overflow: hidden;
-    position: relative;
 }
 
 /* Style the dropdown button to fit inside the topnav */
