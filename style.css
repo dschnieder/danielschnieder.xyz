@@ -5,23 +5,25 @@
     box-sizing: border-box;
 }
 
+/*
 a {
-  color: inherit; /* Keeps the same color as surrounding text */
-  text-decoration: none; /* Removes underline if desired */
+  color: inherit;
+  text-decoration: none;
 }
 
 a:visited {
-  color: inherit; /* Prevents color change for visited links */
+  color: inherit;
 }
 
 a:hover {
-  color: inherit; /* Keeps the same color on hover */
-  text-decoration: none; /* Optional: prevents underline on hover */
+  color: inherit;
+  text-decoration: none;
 }
 
 a:active {
-  color: inherit; /* Keeps the same color when clicked */
+  color: inherit;
 }
+*/
 
 /* Smooth Scrolling */
 html {
