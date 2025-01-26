@@ -145,18 +145,18 @@ nav ul li a:hover::after {
 /* Style the dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
-    border: 5px solid white;
+    border: 2.5px solid white;
     position: absolute;
     background-color: #BB0000;
     /*min-width: 160px;*/
-    margin: 0;
+    margin-bottom: 0.25rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 /* Style the links inside the dropdown */
 .dropdown-content a {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     float: none;
     color: white;
     /*padding: 6px 8px;*/
@@ -493,6 +493,7 @@ footer {
 
 .active:after {
     content: "\2212";
+    font-color: black;
     color: black;
 }
 
