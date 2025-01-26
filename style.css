@@ -245,6 +245,7 @@ nav ul li a:hover::after {
 
 .home .button {
     display: inline-block;
+    font-color: white;
     margin: 0 auto;
 }
 
