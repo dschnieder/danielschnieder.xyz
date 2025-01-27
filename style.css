@@ -236,7 +236,7 @@ nav ul li a:hover::after {
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%); /* Start from the far right */
+    transform: translateX(0%); /* Start from the far right */
   }
   100% {
     transform: translateX(-100%); /* End at the far left */
