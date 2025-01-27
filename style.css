@@ -220,17 +220,17 @@ nav ul li a:hover::after {
   width: 100%; 
   overflow: hidden;
   white-space: nowrap;
-  background-color: #f9f9f9; /* Optional */
+  background-color: #FFFFFF; /* Optional */
   padding: 10px 0;
 }
 
 .ribbon-track {
   display: inline-block;
-  animation: scroll 15s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .ribbon-track img {
-  height: 40px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
   margin: 0 20px; /* Spacing between logos */
   vertical-align: middle;
   transition: transform 0.3s ease-in-out;
