@@ -230,7 +230,6 @@ nav ul li a:hover::after {
 }
 
 .ribbon-track img {
-  height: 80px; /* Adjust size as needed */
   margin: 0 20px; /* Spacing between logos */
   vertical-align: middle;
   transition: transform 0.3s ease-in-out;
