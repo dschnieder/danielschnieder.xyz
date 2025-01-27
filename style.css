@@ -219,30 +219,30 @@ nav ul li a:hover::after {
 .skills-ribbon {
   width: 100%;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: #FFFFFF; /* Optional background */
   padding: 10px 0;
 }
 
 .ribbon-track {
   display: flex;
-  width: 200%; /* Double the container width to ensure seamless scrolling */
-  animation: scroll 20s linear infinite; 
+  animation: scroll 30s linear infinite; /* Speed of the scroll */
 }
 
 .ribbon-track img {
-  height: 96px;
-  margin: 0 30px; 
+  height: 96px; /* Adjust size of logos */
+  margin: 0 30px; /* Adjust space between logos */
   vertical-align: middle;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%); /* Start from the far right */
   }
   100% {
-    transform: translateX(-50%); /* Moves the track 50% to the left, looping the logos */
+    transform: translateX(-100%); /* End at the far left */
   }
 }
+
 
 
 /* Home Section */
