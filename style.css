@@ -216,6 +216,39 @@ nav ul li a:hover::after {
   }
 }
 
+.skills-ribbon {
+  width: 100%; 
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f9f9f9; /* Optional */
+  padding: 10px 0;
+}
+
+.ribbon-track {
+  display: inline-block;
+  animation: scroll 15s linear infinite;
+}
+
+.ribbon-track img {
+  height: 40px; /* Adjust size as needed */
+  margin: 0 20px; /* Spacing between logos */
+  vertical-align: middle;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ribbon-track img:hover {
+  transform: scale(1.2); /* Subtle hover effect */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* Home Section */
 .home {
     text-align: center;
