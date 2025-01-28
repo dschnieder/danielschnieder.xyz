@@ -14,7 +14,7 @@ html {
 body {
     background-color: #212325;
     color: #000000;
-    font-size: 16px; /* Reduced for better mobile readability */
+    font-size: 18px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
 }
@@ -27,7 +27,7 @@ header {
     padding: 1rem;
     color: white;
     text-align: center;
-    font-size: 1.25rem; /* Reduced for mobile */
+    font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -35,18 +35,17 @@ header {
 /* Navigation */
 nav {
     background: #BB0000;
-    padding: 0.5rem; /* Reduced padding for mobile */
+    padding: 1rem;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 nav ul li {
-    margin: 0 10px; /* Reduced margin for mobile */
+    margin: 0 25px;
 }
 
 nav ul li a {
@@ -100,7 +99,7 @@ nav ul li a.active::after {
 }
 
 .dropdown .dropbtn {
-    font-size: 1.25rem; /* Reduced for mobile */
+    font-size: 1.5rem;
     border: none;
     outline: none;
     color: white;
@@ -119,7 +118,7 @@ nav ul li a.active::after {
 }
 
 .dropdown-content a {
-    font-size: 1.25rem; /* Reduced for mobile */
+    font-size: 1.5rem;
     float: none;
     color: white;
     text-decoration: none;
@@ -180,8 +179,8 @@ nav ul li a.active::after {
 }
 
 .ribbon-track img {
-    height: 64px; /* Reduced for mobile */
-    margin: 0 10px; /* Reduced margin for mobile */
+    height: 96px;
+    margin: 0 20px;
     vertical-align: middle;
 }
 
@@ -197,9 +196,9 @@ nav ul li a.active::after {
 /* Home Section */
 .home {
     text-align: center;
-    padding: 3rem 1rem; /* Reduced padding for mobile */
+    padding: 6rem 1rem;
     background-color: #FFFFFF;
-    margin-top: 1rem; /* Reduced margin for mobile */
+    margin-top: 2rem;
 }
 
 .home section {
@@ -211,14 +210,14 @@ nav ul li a.active::after {
 }
 
 .home h1 {
-    font-size: 2.5rem; /* Reduced for mobile */
+    font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .home p {
-    font-size: 1rem; /* Reduced for mobile */
-    margin-bottom: 1.5rem; /* Reduced margin for mobile */
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 /* Other Section */
@@ -226,47 +225,47 @@ nav ul li a.active::after {
     text-align: left;
     padding: 1rem;
     background-color: #FFFFFF;
-    margin-top: 1rem; /* Reduced margin for mobile */
+    margin-top: 2rem;
 }
 
 .other section {
     background-color: #212325;
-    padding: 1rem; /* Reduced padding for mobile */
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 1500px;
 }
 
 .other h1 {
-    font-size: 2rem; /* Reduced for mobile */
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
     text-align: center;
 }
 
 .other h2 {
-    font-size: 1.5rem; /* Reduced for mobile */
-    margin-left: 1rem; /* Reduced margin for mobile */
+    font-size: 2rem;
+    margin-left: 2rem;
 }
 
 .other h3 {
-    font-size: 1.5rem; /* Reduced for mobile */
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .other p {
-    font-size: 1rem; /* Reduced for mobile */
-    margin: 0.5rem 1rem 0.5rem 1rem; /* Reduced margin for mobile */
+    font-size: 1.5rem;
+    margin: 0rem 2rem 0.5rem 2rem;
 }
 
 .other ul {
-    padding-left: 1.5rem; /* Reduced padding for mobile */
-    margin: 0.5rem 1.5rem 0rem 0.5rem; /* Reduced margin for mobile */
+    padding-left: 3rem;
+    margin: 0.5rem 3rem 0rem 1rem;
 }
 
 .other ul li {
-    font-size: 1rem; /* Reduced for mobile */
+    font-size: 1.25rem;
     margin: 0.25rem 0.5rem;
 }
 
@@ -275,11 +274,11 @@ nav ul li a.active::after {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px; /* Reduced gap for mobile */
+    gap: 20px;
 }
 
 .column {
-    flex: 1 1 100%; /* Full width on mobile */
+    flex: 1 1 30%;
     padding: 0.25rem;
     background-color: #f1f1f1;
     box-sizing: border-box;
@@ -303,7 +302,7 @@ nav ul li a.active::after {
 .slideshow-container {
     position: relative;
     margin: auto;
-    max-width: 100%; /* Full width on mobile */
+    max-width: 800px;
     overflow: hidden;
 }
 
@@ -314,7 +313,7 @@ nav ul li a.active::after {
 
 .mySlides img {
     width: 100%;
-    max-height: 300px; /* Reduced for mobile */
+    max-height: 500px;
     object-fit: contain;
 }
 
@@ -323,26 +322,26 @@ nav ul li a.active::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px; /* Reduced for mobile */
-    height: 40px; /* Reduced for mobile */
+    width: 50px;
+    height: 50px;
     padding: 0;
     color: white;
     font-weight: bold;
-    font-size: 16px; /* Reduced for mobile */
+    font-size: 18px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
-    line-height: 40px; /* Adjusted for mobile */
+    line-height: 50px;
     user-select: none;
     z-index: 10;
 }
 
 .prev {
-    left: 10px; /* Adjusted for mobile */
+    left: 15px;
 }
 
 .next {
-    right: 10px; /* Adjusted for mobile */
+    right: 15px;
 }
 
 .prev:hover, .next:hover {
@@ -351,16 +350,16 @@ nav ul li a.active::after {
 
 @media screen and (max-width: 768px) {
     .prev, .next {
-        width: 30px; /* Further reduced for mobile */
-        height: 30px; /* Further reduced for mobile */
-        font-size: 14px; /* Further reduced for mobile */
-        line-height: 30px; /* Further reduced for mobile */
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
     }
     .prev {
-        left: 5px; /* Further reduced for mobile */
+        left: 10px;
     }
     .next {
-        right: 5px; /* Further reduced for mobile */
+        right: 10px;
     }
 }
 
@@ -382,10 +381,10 @@ nav ul li a.active::after {
 
 /* Buttons */
 .button {
-    padding: 10px 20px; /* Reduced for mobile */
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
-    font-size: 0.9rem; /* Reduced for mobile */
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     background-color: #BB0000;
@@ -401,13 +400,13 @@ nav ul li a.active::after {
 
 /* Sections */
 section {
-    padding: 1rem; /* Reduced for mobile */
-    max-width: 100%; /* Full width on mobile */
+    padding: 2rem;
+    max-width: 1250px;
     margin: 0 auto;
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem; /* Reduced for mobile */
+    margin-bottom: 2rem;
 }
 
 /* Fade-in Animation */
@@ -430,7 +429,7 @@ footer {
     padding: 1rem;
     background: #BB0000;
     color: white;
-    font-size: 0.9rem; /* Reduced for mobile */
+    font-size: 1rem;
 }
 
 /* Collapsible */
@@ -438,13 +437,13 @@ footer {
     background-color: white;
     color: black;
     cursor: pointer;
-    padding: 0.75rem; /* Reduced for mobile */
+    padding: 1rem;
     width: 100%;
     border-color: transparent;
     border-bottom: 5px solid #BB0000;
     text-align: left;
     outline: none;
-    font-size: 1.5rem; /* Reduced for mobile */
+    font-size: 2rem;
 }
 
 .collapsible:after {
@@ -473,10 +472,10 @@ footer {
     }
 
     .home h1 {
-        font-size: 2rem; /* Further reduced for mobile */
+        font-size: 2.5rem;
     }
 
     .home p {
-        font-size: 0.9rem; /* Further reduced for mobile */
+        font-size: 1.1rem;
     }
 }
