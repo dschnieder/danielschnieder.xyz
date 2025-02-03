@@ -206,6 +206,7 @@ nav ul li a:hover::after {
 }
 
 .skills-ribbon {
+    margin: 0rem;
     width: 100%;
     overflow: hidden;
     background-color: #FFFFFF; /* Optional background */
