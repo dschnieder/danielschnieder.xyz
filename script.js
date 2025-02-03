@@ -130,18 +130,21 @@ function startAutoSlide() {
 document.addEventListener('DOMContentLoaded', initSlides);
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const username = "SchniederDaniel";
+  const username = "SchniederDaniel"; // Your Duolingo username
   const streakElement = document.getElementById("streak-count");
 
   try {
-    const response = await fetch(`https://www.duolingo.com/profile/SchniederDaniel`);
+    const response = await fetch(`https://www.duolingo.com/2017-06-30/users?username=SchniederDaniel`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const data = await response.json();
 
-    // Extract streak information
-    const streak = data.users[0].streak;
-    streakElement.textContent = streak || "0";
+    // Extract streak information (check nested properties for accuracy)
+    const streak = data.users[0]?.streak ?? 0; // Fallback to 0 if no streak is found
+    streakElement.textContent = streak;
   } catch (error) {
-    console.error("Error fetching streak:", error);
+    console.error("Error fetching streak data:", error);
     streakElement.textContent = "Error";
   }
 });
