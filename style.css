@@ -206,21 +206,22 @@ nav ul li a:hover::after {
 }
 
 .skills-ribbon {
-  width: 100%;
-  overflow: hidden;
-  background-color: #FFFFFF; /* Optional background */
-  padding: 5px 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #FFFFFF; /* Optional background */
+    /*padding: 5px 0;*/
 }
 
 .ribbon-track {
-  display: flex;
-  animation: scroll 30s linear infinite; /* Speed of the scroll */
+    margin: 0rem;
+    display: flex;
+    animation: scroll 30s linear infinite; /* Speed of the scroll */
 }
 
 .ribbon-track img {
-  height: 96px; /* Adjust size of logos */
-  margin: 0 20px; /* Adjust space between logos */
-  vertical-align: middle;
+    height: 96px; /* Adjust size of logos */
+    margin: 0 20px; /* Adjust space between logos */
+    vertical-align: middle;
 }
 
 @keyframes scroll {
