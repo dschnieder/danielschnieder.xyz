@@ -129,22 +129,21 @@ function startAutoSlide() {
 // Initialize slideshow after DOM loads
 document.addEventListener('DOMContentLoaded', initSlides);
 
-document.addEventListener("DOMContentLoaded", async () => {
+const express = require("express");
+const fetch = require("node-fetch");
+const app = express();
+
+app.get("/duolingo-streak", async (req, res) => {
   const username = "SchniederDaniel"; // Your Duolingo username
-  const streakElement = document.getElementById("streak-count");
-
   try {
-    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://www.duolingo.com/2017-06-30/users?username=${username}`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
+    const response = await fetch(`https://www.duolingo.com/2017-06-30/users?username=${username}`);
     const data = await response.json();
-
-    // Extract streak information
-    const streak = data.users[0]?.streak ?? 0; // Fallback to 0 if no streak is found
-    streakElement.textContent = streak;
+    const streak = data.users[0]?.streak ?? 0;
+    res.json({ streak });
   } catch (error) {
-    console.error("Error fetching streak data:", error);
-    streakElement.textContent = "Error";
+    res.status(500).json({ error: "Failed to fetch streak data" });
   }
 });
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
