@@ -134,13 +134,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   const streakElement = document.getElementById("streak-count");
 
   try {
-    const response = await fetch(`https://www.duolingo.com/2017-06-30/users?username=SchniederDaniel`);
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://www.duolingo.com/2017-06-30/users?username=${username}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
 
-    // Extract streak information (check nested properties for accuracy)
+    // Extract streak information
     const streak = data.users[0]?.streak ?? 0; // Fallback to 0 if no streak is found
     streakElement.textContent = streak;
   } catch (error) {
