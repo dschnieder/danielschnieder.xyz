@@ -128,3 +128,20 @@ function startAutoSlide() {
 
 // Initialize slideshow after DOM loads
 document.addEventListener('DOMContentLoaded', initSlides);
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const username = "SchniederDaniel";
+  const streakElement = document.getElementById("streak-count");
+
+  try {
+    const response = await fetch(`https://www.duolingo.com/profile/SchniederDaniel`);
+    const data = await response.json();
+
+    // Extract streak information
+    const streak = data.users[0].streak;
+    streakElement.textContent = streak || "0";
+  } catch (error) {
+    console.error("Error fetching streak:", error);
+    streakElement.textContent = "Error";
+  }
+});
