@@ -325,31 +325,31 @@ nav ul li a:hover::after {
 }
 
 /* 3-Column Layout */
-.row {
+.rowSkills {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px; /* Adjust the space between columns */
 }
 
-.column {
+.columnSkills {
     flex: 1 1 30%; /* Each column takes 30% of the available width, and shrinks if needed */
     padding: 0.25rem;
     background-color: #f1f1f1; /* Default background color */
     box-sizing: border-box;
 }
 
-.column h2 {
+.columnSkills h2 {
     margin-bottom: 0.25rem;
 }
 
-.column p {
+.columnSkills p {
     margin-bottom: 0.25rem;
 }
 
 /* For responsive layout */
 @media (max-width: 768px) {
-    .column {
+    .columnSkills {
         flex: 1 1 100%; /* Stack columns on smaller screens */
     }
 }
@@ -574,22 +574,22 @@ img {
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-/* @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .column {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
   }
-} */
+}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .column {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
   }
-} */
+}
 
 @media (max-width: 768px) {
     nav ul {
