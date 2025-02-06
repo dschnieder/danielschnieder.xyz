@@ -532,23 +532,6 @@ footer {
     background-color: white;
 }
 
-.streak-container {
-  margin-top: 20vh;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-}
-
-h1 {
-  font-size: 24px;
-}
-
-p {
-  font-size: 18px;
-}
-
 img {
     width: 100%;
     height: auto;
@@ -591,22 +574,22 @@ img {
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .column {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
   }
-}
+} */
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .column {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
   }
-}
+} */
 
 @media (max-width: 768px) {
     nav ul {
