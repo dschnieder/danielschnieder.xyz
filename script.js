@@ -129,21 +129,47 @@ function startAutoSlide() {
 // Initialize slideshow after DOM loads
 document.addEventListener('DOMContentLoaded', initSlides);
 
-const express = require("express");
-const fetch = require("node-fetch");
-const app = express();
+// Get or initialize the streak value
+    const streakKey = "duolingoStreak";
+    const lastUpdatedKey = "lastUpdated";
 
-app.get("/duolingo-streak", async (req, res) => {
-  const username = "SchniederDaniel"; // Your Duolingo username
-  try {
-    const response = await fetch(`https://www.duolingo.com/2017-06-30/users?username=${username}`);
-    const data = await response.json();
-    const streak = data.users[0]?.streak ?? 0;
-    res.json({ streak });
-  } catch (error) {
-    res.status(500).json({ error: "Failed to fetch streak data" });
-  }
-});
+    let streak = localStorage.getItem(streakKey) 
+      ? parseInt(localStorage.getItem(streakKey)) 
+      : 1; // Set your initial streak value here
+    const lastUpdated = localStorage.getItem(lastUpdatedKey) 
+      ? new Date(localStorage.getItem(lastUpdatedKey)) 
+      : new Date();
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    // Update the streak if the last update was before today
+    const now = new Date();
+    if (now.toDateString() !== lastUpdated.toDateString()) {
+      const diffDays = Math.floor((now - lastUpdated) / (1000 * 60 * 60 * 24));
+      streak += diffDays; // Increment by the number of days passed
+      localStorage.setItem(streakKey, streak);
+      localStorage.setItem(lastUpdatedKey, now.toISOString());
+    }
+
+    // Display the streak
+    document.getElementById("streak").innerText = streak;
+
+    // Function to update the streak at midnight
+    function scheduleMidnightIncrement() {
+      const timeUntilMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1) - now;
+      setTimeout(() => {
+        streak++;
+        localStorage.setItem(streakKey, streak);
+        localStorage.setItem(lastUpdatedKey, new Date().toISOString());
+        document.getElementById("streak").innerText = streak;
+
+        // Schedule the next daily increment
+        setInterval(() => {
+          streak++;
+          localStorage.setItem(streakKey, streak);
+          localStorage.setItem(lastUpdatedKey, new Date().toISOString());
+          document.getElementById("streak").innerText = streak;
+        }, 24 * 60 * 60 * 1000);
+      }, timeUntilMidnight);
+    }
+
+    // Start the scheduling
+    scheduleMidnightIncrement();
