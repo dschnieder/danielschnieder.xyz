@@ -81,8 +81,8 @@
             <h2>Introduction</h2>
             <p>Hi! I'm Daniel Schnieder, a third-year computer 
                 engineering major at The Ohio State University with a passion
-                for embedded systems, signal processing, and game development. 
-                Currently, I'm leading the development of telemetry systems for 
+                for embedded systems, computer architecture, and game development. 
+                Currently, I'm leading the development of the new telemetry system at
                 <a href="https://www.buckeyesolar.org/">Buckeye Solar Racing</a>.</p>
         </section>
 
@@ -125,9 +125,18 @@
 
         <section class="other">
             <h2>What am I currently working on?</h2>
-            <p>February 4th, 2025: I have spent the past two weeks onboarding new members for the telemetry team by giving a basic overview of the project, our goals, and our progress so far.
-                Moreover, I have delegated tasks to members such as working on front/backend of the telemetry website and designing the CAN message format for wireless transceivers. 
-                My goal for the semester is to have a fully functional telemetry system by May, so we can focus on data collection and analysis in the fall/spring prior to the race in summer 2026.
+            <p>March 25th, 2025: Lately, I've been working on creating a test plan to conduct a range test for our LoRa RYLR998 modules. 
+                A teammate and I did a preliminary test at Carmack to get an idea of the range; at ~400 meters (~0.25mi), the wireless modules were performing adequately with just their stock PCB antennae. 
+                We have been looking into buying the M4 versions of the same modules to attach custom antennae to them, but they are out-of-stock in the US and shipping it from Germany would be really expensive ($35-70+ for shipping alone). 
+                So, we only testing with the stock antennae for the range test; I may buy the alternate versions and some antennae to test during the summer.
+                <br>
+                Additionally, I worked on collaborating with the Battery and High Voltage leads to understand what metrics we need from the BMS, so I could work on organizing what our CAN frames will look like (and so the other Telemetry members can work on parsing the data for the backend of the website).
+                <br>
+                Speaking of the website, we have continued development of the backend, including integrating SQL (SQLite3 and SQLAlchemy), parsing data from an MCU's serial monitor, and displaying said data on the frontend. 
+                Now, we are figuring out how to get the website to display graphical data, updating in real-time.
+                <br>
+                In the near future, I will be working on actually integrating our system, thus far, with our BMS and new motor controller; 
+                I will be learning more about KiCAD to make custom PCBs to ensure a more robust telemetry system.
 
                 <br>The pictures below were taken over the past few years. The car shown is our previous solar car, Farasi II.
             </p>
